@@ -118,8 +118,6 @@ client.on('message', message => {
 message.channel.sendEmbed(embed);
  }
 });
-help.js
-جارٍ عرض help.js.
 
 
 client.login(process.env.BOT_TOKEN);
