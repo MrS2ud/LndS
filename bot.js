@@ -107,10 +107,10 @@ client.on('ready', () => {
 client.on('message', message => {
   if (message.content === "!help") {
   let embed = new Discord.RichEmbed()
-.addField('     **!server** ' ,' ** معلومات السيرفر  ** ')
-.addField('     **!id ** ' ,' ** معلومات الحساب ** ')
-.addField('     **!clear** ' , '**لـ مسح الشات** ')
-.addField('     **!roles** ' , '**ping , سرعة الاتصال الخاصة بك** ')
+.addField('     **__معلومات السيرفر__** ' ,' ** !server ** ')
+.addField('     **__معلومات الحساب__** ' ,' ** !id ** ')
+.addField('     **__مسح الشات__** ' , '**!clear** ')
+.addField('     **__سرعة الأتصال الخاصة بك** ' , '**!ping** ')
 .addField('للأستفسار تواصل معنا : ' , '**! https://discord.gg/ENgRsCF**')
 .addField('**Bots .: **' , '**https://discordapp.com/api/oauth2/authorize?client_id=602710735713468438&permissions=8&scope=bot**')
 .setColor('RANDOM')
