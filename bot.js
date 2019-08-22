@@ -107,7 +107,6 @@ client.on('ready', () => {
 client.on('message', message => {
   if (message.content === "!help") {
   let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
 .addField('     **!server** ' ,' ** معلومات السيرفر  ** ')
 .addField('     **!id ** ' ,' ** معلومات الحساب ** ')
 .addField('     **!clear** ' , '**لـ مسح الشات** ')
