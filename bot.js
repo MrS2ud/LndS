@@ -43,11 +43,11 @@ client.on('message', message => {
 
 
 client.on('message', message => {   
-  if (message.content === "ping") {
+  if (message.content === "!ping") {
    const embed = new Discord.RichEmbed()
 
 .setColor("RANDOM")
-.addField('``Speed ​​of bot Connection`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
+.addField('**__Speed ​​of bot Connection__** ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
 
 
 message.channel.sendEmbed(embed);
