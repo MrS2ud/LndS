@@ -47,7 +47,7 @@ client.on('message', message => {
    const embed = new Discord.RichEmbed()
 
 .setColor("RANDOM")
-.addField('**__Speed ​​of bot Connection__** ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
+.addField('**__Your Ping He is :__** ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
 
 
 message.channel.sendEmbed(embed);
