@@ -18,7 +18,7 @@ client.on('ready', () => {
 
   console.log(`Logged in as ${client.user.tag}!`);
 
-client.user.setGame(`Security Legend ,"http://twitch.tv/S-F")
+client.user.setGame(`Security Legend `,"http://twitch.tv/S-F")
 
 client.user.setStatus("dnd")
 
@@ -38,6 +38,19 @@ client.on('message', message => {
      
   message.channel.sendEmbed(embed);
     }
+});
+
+
+client.on('message', message => {   
+  if (message.content === "ping") {
+   const embed = new Discord.RichEmbed()
+
+.setColor("RANDOM")
+.addField('``Speed ​​of bot Connection`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
+
+
+message.channel.sendEmbed(embed);
+ }
 });
 
 
