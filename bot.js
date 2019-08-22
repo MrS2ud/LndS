@@ -105,7 +105,7 @@ client.on('ready', () => {
 
  
 client.on('message', message => {
-  if (message.content === "!elp") {
+  if (message.content === "!help") {
   let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField('     **!server** ' ,' ** معلومات السيرفر  ** ')
@@ -113,7 +113,7 @@ client.on('message', message => {
 .addField('     **!clear** ' , '**لـ مسح الشات** ')
 .addField('     **!roles** ' , '**ping , سرعة الاتصال الخاصة بك** ')
 .addField('للأستفسار تواصل معنا : ' , '**! https://discord.gg/ENgRsCF**')
-.addField('**Bots : **' , '**https://discordapp.com/api/oauth2/authorize?client_id=602710735713468438&permissions=8&scope=bot*')
+.addField('**Bots : **' , '**https://discordapp.com/api/oauth2/authorize?client_id=602710735713468438&permissions=8&scope=bot**')
 .setColor('RANDOM')
 message.channel.sendEmbed(embed);
  }
