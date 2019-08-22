@@ -47,7 +47,7 @@ client.on('message', message => {
    const embed = new Discord.RichEmbed()
 
 .setColor("RANDOM")
-.addField('**__Your Ping He is :__** ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
+.addField('**__Speed ​​of bot Connection__** ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
 
 
 message.channel.sendEmbed(embed);
@@ -92,6 +92,31 @@ console.log(`${msg.author.username} Has Ran Server Command`)
     msg.channel.send({embed:embed});
   }
 });
+
+
+client.on('message' , async (message) => {  //Alpha Codes - Copyright .
+  var prefix = "!"  //<-- Prefix
+      if(message.content.startsWith(prefix + "topinv")) { //Alpha Codes - Copyright .
+  if(message.author.bot) return;
+  if(!message.channel.guild) return message.reply(' Error : ` Guild Command `');  //Alpha Codes - Copyright .
+    var invites = await message.guild.fetchInvites();
+      invites = invites.array();
+      arraySort(invites, 'uses', { reverse: true });  //Alpha Codes - Copyright .
+      let possibleInvites = ['User Invited |  Uses '];   //Alpha Codes - Copyright .
+      invites.forEach(i => {
+          if (i.uses === 0) {   //Alpha Codes - Copyright .
+              return;
+          }
+        possibleInvites.push(['n ' +'<@'+ i.inviter.id +'>' + '  :  ' +   i.uses]); //Alpha Codes - Copyright .
+       //Alpha Codes - Copyright .
+      })
+      const embed = new Discord.RichEmbed()
+   .setColor('RANDOM')
+      .addField("Top Invites." ,`${(possibleInvites)}`) //Alpha Codes - Copyright .
+  
+      message.channel.send(embed) //Alpha Codes - Copyright .
+      }
+  });
 
 
 client.login(process.env.BOT_TOKEN);
